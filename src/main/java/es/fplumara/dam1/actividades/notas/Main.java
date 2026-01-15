@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<String> registros = List.of(
+       List<String> registros = List.of(
                 "123A;PROG;7.5",
                 "123A;BBDD;6.0",
                 "123A;PROG;8.0",

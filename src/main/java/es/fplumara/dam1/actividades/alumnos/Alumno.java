@@ -1,6 +1,8 @@
 package es.fplumara.dam1.actividades.alumnos;
 
-public class Alumno {
+import java.util.Objects;
+
+public class Alumno implements Comparable <Alumno> {
     private final String dni;
     private final String nombre;
 
@@ -8,6 +10,18 @@ public class Alumno {
         this.dni = dni;
         this.nombre = nombre;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(dni, alumno.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
     }
 
     public String getDni() {
@@ -23,4 +37,8 @@ public class Alumno {
         return "Alumno{dni='" + dni + "', nombre='" + nombre + "'}";
     }
 
+    @Override
+    public int compareTo(Alumno o) {
+        return this.dni.compareTo(o.dni);
+    }
 }
