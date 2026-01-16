@@ -26,7 +26,7 @@ public class Actividad  {
 
 
         // TREESET
-        System.out.print("---------------------------------");
+        System.out.print("---------------------------------\n");
         Set<Alumno> alumnoTreeSet = new TreeSet<Alumno>();
         for (Alumno alumnoTree : alumnosEntrada) {
             alumnoTreeSet.add(alumnoTree);
